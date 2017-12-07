@@ -1,0 +1,20 @@
+<div class="paginationBox">
+    <ul class="v-page-ul">
+        <li class="v-page-total">共{{@total}}条</li>
+        <li class="v-page-prev" :attr="{disabled: @current == 1 || @current == 0}" :click='@prevPage'>
+            <a class="v-page-prev-icon">上一页</a>
+        </li>
+        <li class="v-page-current">
+            {{@current}}/{{ @totalPage }}页
+        </li>
+        <li class="v-page-next" :attr="{disabled: @current == Math.ceil(@total/@pageSize)}" :click='@nextPage'>
+            <a class="v-page-next-icon">下一页</a>
+        </li>
+        <li class="v-page-pageSize">
+            <ms-select :widget="{options:@pageSizeOpt, value:@pageSizeVal, onChange:@pageSizeChange}"></ms-select>
+        </li>
+        <li class="jumpPage">
+            前往<input type="text" ms-duplex='@jumpPageVal' :keyup="@jumpPageEvt | enter"/>页
+        </li>
+    </ul>
+</div>

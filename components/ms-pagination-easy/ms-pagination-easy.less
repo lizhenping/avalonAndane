@@ -1,0 +1,51 @@
+@import '../../styles/index';
+.v-page-ul{
+    list-style-type: none;
+    height: 32px;
+    line-height: 32px;
+    display: inline-block;
+    padding-left: 0px;
+    li{
+        float: left;
+        margin-left: 10px;
+    }
+    li a{
+        color: #ffffff;
+    }
+    li a:hover{
+        text-decoration: none;
+    }
+    .v-page-prev,.v-page-next{
+        float: left;
+        cursor: pointer;
+        text-align: center;
+        background: #0078d7;
+        width: 60px;
+    }
+    .v-page-prev[disabled],.v-page-next[disabled]{
+        cursor: not-allowed;
+        background: #d4d7d9;
+    }
+    .v-page-pageSize{
+        width: 110px;
+    }
+    .v-page-pageSize .ane-select-search input{
+        width: 84px;
+    }
+    .jumpPage input{
+        height: 32px;
+        line-height: 32px;
+        width: 40px;
+        margin-left: 5px;
+        margin-right: 5px;
+        border: 1px solid #CCCCCC;
+        text-align: center;
+        -webkit-border-radius:5px;//适配以webkit为核心的浏览器(chrome、safari等)
+        -moz-border-radius:5px;//适配firefox浏览器
+        -ms-border-radius:5px;//适配IE浏览器
+        -o-border-radius:5px;//适配opera浏览器
+        border-radius:5px;//适配所有浏览器(需要放在最后面，类似于if..else if..else..)
+        outline: none; //定义了圆角文本框，解决获得焦点的时候的方角样式
+    }
+
+}

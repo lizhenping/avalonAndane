@@ -146,6 +146,15 @@ module.exports = [{
              });
          }
     }, {
+        key: 'component-demo-pagination-pagination-easy',
+        title: 'pagination分页-简易版',
+        uri: '/pagination-easy',
+        location: function (resolve) {
+             require.ensure([], function () {
+                 resolve(require('../components/ms-pagination-easy/ms-pagination-easy.md'));
+             });
+         }
+    }, {
         key: 'component-demo-tree-tree',
         title: 'tree 树',
         uri: '/tree',
